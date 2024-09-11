@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe   -g -std=gnu++11 -o CMakeFiles/test.dir/hi.cpp.obj -c \"C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/hi.cpp\"",
+  "file": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/hi.cpp",
+  "output": "CMakeFiles/test.dir/hi.cpp.obj"
+},
+{
+  "directory": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe   -g -std=gnu++11 -o CMakeFiles/test.dir/my_func.cpp.obj -c \"C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/my_func.cpp\"",
+  "file": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/my_func.cpp",
+  "output": "CMakeFiles/test.dir/my_func.cpp.obj"
+}
+]
