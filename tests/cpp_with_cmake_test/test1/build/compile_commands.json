@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/test.dir/hi.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/hi.cpp",
+  "file": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/hi.cpp"
+},
+{
+  "directory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/test.dir/my_func.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/my_func.cpp",
+  "file": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/my_func.cpp"
+}
+]

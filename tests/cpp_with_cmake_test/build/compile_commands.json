@@ -1,14 +1,17 @@
 [
 {
-  "directory": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/build",
-  "command": "C:/msys64/mingw64/bin/g++.exe   -g -std=gnu++11 -o CMakeFiles/test.dir/hi.cpp.obj -c \"C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/hi.cpp\"",
-  "file": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/hi.cpp",
-  "output": "CMakeFiles/test.dir/hi.cpp.obj"
+  "directory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/mi_proyecto.dir/main.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/main.cpp",
+  "file": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/main.cpp"
 },
 {
-  "directory": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/build",
-  "command": "C:/msys64/mingw64/bin/g++.exe   -g -std=gnu++11 -o CMakeFiles/test.dir/my_func.cpp.obj -c \"C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/my_func.cpp\"",
-  "file": "C:/Users/maris/OneDrive/Escritorio/Programacion verano/computationII/tests/cpp_with_cmake_test/my_func.cpp",
-  "output": "CMakeFiles/test.dir/my_func.cpp.obj"
+  "directory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/mi_proyecto.dir/func_1.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/func_1.cpp",
+  "file": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/func_1.cpp"
+},
+{
+  "directory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
+  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/mi_proyecto.dir/func_2.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/func_2.cpp",
+  "file": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2/func_2.cpp"
 }
 ]
