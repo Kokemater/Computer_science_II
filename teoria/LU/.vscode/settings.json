@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"cmath": "cpp",
+		"ostream": "cpp",
+		"functions.h": "c",
+		"matrix.h": "c"
+	}
+}

@@ -1,3 +1,7 @@
 {
-    "cmake.sourceDirectory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2"
+	"cmake.sourceDirectory": "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test2",
+	"files.associations": {
+		"iostream": "cpp",
+		"iomanip": "cpp"
+	}
 }
