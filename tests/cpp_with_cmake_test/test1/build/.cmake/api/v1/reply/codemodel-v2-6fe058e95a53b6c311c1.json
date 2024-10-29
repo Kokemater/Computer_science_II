@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build",
-		"source" : "/home/jbutragu/compu_II/tests/cpp_with_cmake_test"
+		"build" : "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build",
+		"source" : "/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1"
 	},
 	"version" : 
 	{

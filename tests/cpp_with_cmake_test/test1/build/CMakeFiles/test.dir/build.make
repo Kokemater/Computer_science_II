@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jbutragu/compu_II/tests/cpp_with_cmake_test
+CMAKE_SOURCE_DIR = /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jbutragu/compu_II/tests/cpp_with_cmake_test/build
+CMAKE_BINARY_DIR = /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/hi.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/hi.cpp.o: ../hi.cpp
 CMakeFiles/test.dir/hi.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/hi.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/hi.cpp.o -MF CMakeFiles/test.dir/hi.cpp.o.d -o CMakeFiles/test.dir/hi.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/hi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/hi.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/hi.cpp.o -MF CMakeFiles/test.dir/hi.cpp.o.d -o CMakeFiles/test.dir/hi.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/hi.cpp
 
 CMakeFiles/test.dir/hi.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/hi.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbutragu/compu_II/tests/cpp_with_cmake_test/hi.cpp > CMakeFiles/test.dir/hi.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/hi.cpp > CMakeFiles/test.dir/hi.cpp.i
 
 CMakeFiles/test.dir/hi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/hi.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbutragu/compu_II/tests/cpp_with_cmake_test/hi.cpp -o CMakeFiles/test.dir/hi.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/hi.cpp -o CMakeFiles/test.dir/hi.cpp.s
 
 CMakeFiles/test.dir/my_func.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/my_func.cpp.o: ../my_func.cpp
 CMakeFiles/test.dir/my_func.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/my_func.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/my_func.cpp.o -MF CMakeFiles/test.dir/my_func.cpp.o.d -o CMakeFiles/test.dir/my_func.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/my_func.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/my_func.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/my_func.cpp.o -MF CMakeFiles/test.dir/my_func.cpp.o.d -o CMakeFiles/test.dir/my_func.cpp.o -c /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/my_func.cpp
 
 CMakeFiles/test.dir/my_func.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/my_func.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbutragu/compu_II/tests/cpp_with_cmake_test/my_func.cpp > CMakeFiles/test.dir/my_func.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/my_func.cpp > CMakeFiles/test.dir/my_func.cpp.i
 
 CMakeFiles/test.dir/my_func.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/my_func.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbutragu/compu_II/tests/cpp_with_cmake_test/my_func.cpp -o CMakeFiles/test.dir/my_func.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/my_func.cpp -o CMakeFiles/test.dir/my_func.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -109,7 +109,7 @@ test: CMakeFiles/test.dir/hi.cpp.o
 test: CMakeFiles/test.dir/my_func.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/jbutragu/compu_II/tests/cpp_with_cmake_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbutragu/compu_II/tests/cpp_with_cmake_test /home/jbutragu/compu_II/tests/cpp_with_cmake_test /home/jbutragu/compu_II/tests/cpp_with_cmake_test/build /home/jbutragu/compu_II/tests/cpp_with_cmake_test/build /home/jbutragu/compu_II/tests/cpp_with_cmake_test/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1 /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1 /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build /home/jbutragu/compu_II/tests/cpp_with_cmake_test/test1/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

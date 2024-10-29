@@ -1,5 +1,10 @@
-#include "funcs.h"
+#include <iostream>
+#include <cmath>
+#include <fstream>
+using namespace std;
 
+#include "../../functions/matrix.h"
+using namespace math;
 
 int main(void)
 {
