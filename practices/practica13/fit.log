@@ -1,0 +1,1053 @@
+
+
+*******************************************************************************
+Tue Nov 19 17:03:19 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:03:19 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:05:52 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:05:52 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:08:17 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:08:17 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:08:49 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:08:49 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:09:07 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:09:07 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:12:48 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+BREAK: Need via and either parameter list or file
+
+*******************************************************************************
+Tue Nov 19 17:13:33 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+BREAK: Need via and either parameter list or file
+
+*******************************************************************************
+Tue Nov 19 17:14:41 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:14:41 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:16:35 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+BREAK: Need via and either parameter list or file
+
+*******************************************************************************
+Tue Nov 19 17:17:31 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:17:31 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:18:50 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:18:50 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:20:08 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:20:08 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:21:51 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:21:51 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:23:11 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.1447265761e+03   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.8166797245e+01  -3.57e-08  2.47e-04    2.312061e+00  -2.222093e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 68.1668
+rel. change during last iteration : -3.56695e-13
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94603
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.78704
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.31206          +/- 0.2507       (10.84%)
+b               = -2.22209         +/- 0.8386       (37.74%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:23:11 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 2.8696109238e+02   0.00e+00  2.47e+00    1.000000e+00   1.000000e+00
+   4 6.5457702180e-03  -2.15e-06  2.47e-04    2.006580e+00   5.178194e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.00654577
+rel. change during last iteration : -2.15437e-11
+
+degrees of freedom    (FIT_NDF)                        : 18
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0190697
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000363654
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 2.00658          +/- 0.002457     (0.1224%)
+d               = 0.517819         +/- 0.008218     (1.587%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.855  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:25:01 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-3.00000 : -1.00000]
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.8256961689e+02   0.00e+00  1.60e+00    1.000000e+00   1.000000e+00
+   5 5.2533904762e-06  -1.37e-08  1.60e-05    3.999279e+00   1.815719e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.25339e-06
+rel. change during last iteration : -1.37211e-13
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00114601
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31335e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 3.99928          +/- 0.00091      (0.02276%)
+b               = 0.181572         +/- 0.001841     (1.014%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.967  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:25:01 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-5.00000 : -2.00000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 1.6453935509e+02   0.00e+00  2.62e+00    1.000000e+00   1.000000e+00
+   5 1.1876363636e-08   0.00e+00  2.62e+02    1.999958e+00   4.985696e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1.18764e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.85298e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.48455e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 1.99996          +/- 1.409e-05    (0.0007046%)
+d               = 0.49857          +/- 5.028e-05    (0.01009%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.970  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:25:24 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-3.00000 : -1.00000]
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.8256961689e+02   0.00e+00  1.60e+00    1.000000e+00   1.000000e+00
+   5 5.2533904762e-06  -1.37e-08  1.60e-05    3.999279e+00   1.815719e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.25339e-06
+rel. change during last iteration : -1.37211e-13
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00114601
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31335e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 3.99928          +/- 0.00091      (0.02276%)
+b               = 0.181572         +/- 0.001841     (1.014%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.967  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:25:24 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-5.00000 : -2.00000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 1.6453935509e+02   0.00e+00  2.62e+00    1.000000e+00   1.000000e+00
+   5 1.1876363636e-08   0.00e+00  2.62e+02    1.999958e+00   4.985696e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1.18764e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.85298e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.48455e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 1.99996          +/- 1.409e-05    (0.0007046%)
+d               = 0.49857          +/- 5.028e-05    (0.01009%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.970  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:27:20 2024
+
+
+FIT:    data read from "simp_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-3.00000 : -1.00000]
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_simpson(x)
+	f_simpson(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.8256961689e+02   0.00e+00  1.60e+00    1.000000e+00   1.000000e+00
+   5 5.2533904762e-06  -1.37e-08  1.60e-05    3.999279e+00   1.815719e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 5.25339e-06
+rel. change during last iteration : -1.37211e-13
+
+degrees of freedom    (FIT_NDF)                        : 4
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00114601
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.31335e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 3.99928          +/- 0.00091      (0.02276%)
+b               = 0.181572         +/- 0.001841     (1.014%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.967  1.000 
+
+
+*******************************************************************************
+Tue Nov 19 17:27:20 2024
+
+
+FIT:    data read from "trap_data.txt" using 1:2
+        format = x:z
+        x range restricted to [-5.00000 : -2.00000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f_trap(x)
+	f_trap(x) = c*x + d
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c             d            
+   0 1.6453935509e+02   0.00e+00  2.62e+00    1.000000e+00   1.000000e+00
+   5 1.1876363636e-08   0.00e+00  2.62e+02    1.999958e+00   4.985696e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1.18764e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.85298e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.48455e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c               = 1.99996          +/- 1.409e-05    (0.0007046%)
+d               = 0.49857          +/- 5.028e-05    (0.01009%)
+
+correlation matrix of the fit parameters:
+                c      d      
+c               1.000 
+d               0.970  1.000 
