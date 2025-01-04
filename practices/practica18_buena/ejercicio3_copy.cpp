@@ -13,7 +13,8 @@ void readMatrix(ifstream &file, matrix<double> &mat, int rows, int cols) {
 }
 
 void findExtrema(matrix<double> &mat, ofstream &max1, ofstream &max2, ofstream &max3, int rows) {
-    for (int i = 0; i < rows - 1; i++) {
+    for (int i = 0; i < rows - 1; i++)
+	{
         // x1
         if (mat(i, 2) * mat(i + 1, 2) < 0)
             max1 << mat(i, 0) << " " << mat(i, 1) << endl;
@@ -33,9 +34,8 @@ int main(void) {
     matrix<double> A01(rows, cols);
     matrix<double> A10(rows, cols);
 
-    ifstream omega1("rk4_data.txt");
-    ifstream omega01("rk4_data_01.txt");
-    ifstream omega10("rk4_data_10.txt");
+    ifstream omega1("rk_4w01.txt");
+    ifstream omega01("rk_4w1.txt");
 
     ofstream omega1_max1("max_1_1.txt");
     ofstream omega1_max2("max_1_2.txt");
@@ -45,17 +45,12 @@ int main(void) {
     ofstream omega01_max2("max_01_2.txt");
     ofstream omega01_max3("max_01_3.txt");
 
-    ofstream omega10_max1("max_10_1.txt");
-    ofstream omega10_max2("max_10_2.txt");
-    ofstream omega10_max3("max_10_3.txt");
 
     readMatrix(omega1, A1, rows, cols);
     readMatrix(omega01, A01, rows, cols);
-    readMatrix(omega10, A10, rows, cols);
 
     findExtrema(A1, omega1_max1, omega1_max2, omega1_max3, rows);
     findExtrema(A01, omega01_max1, omega01_max2, omega01_max3, rows);
-    findExtrema(A10, omega10_max1, omega10_max2, omega10_max3, rows);
 
     return 0;
 }

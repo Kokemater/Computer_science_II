@@ -15,5 +15,5 @@ set terminal png size 800,600
 set output 'grafico.png'
 
 # Graficar los puntos experimentales y la expresión teórica
-plot "points.txt" using 1:2 with linespoints pointtype 7 pointsize 1.5 title "Datos Obtenidos", \
+plot "points.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "Datos Obtenidos", \
      teorico(x) with lines linecolor rgb "red" title "Expresión cota teórica"

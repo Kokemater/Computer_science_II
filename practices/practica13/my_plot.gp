@@ -19,7 +19,7 @@ f_trap(x) = c*x + d
 fit f_trap(x) "trap_data.txt" using 1:2 via c,d
 
 # Configurar el tamaño de los puntos (puedes ajustar el número en 'pointsize' según el tamaño deseado)
-set pointsize 1.5  # Aumentar tamaño de los puntos (1.5 es un valor más grande que el predeterminado de 1)
+set pointsize 0.5  # Aumentar tamaño de los puntos (1.5 es un valor más grande que el predeterminado de 1)
 
 set xrange [-7:0]
 # Plot con el ajuste lineal y los puntos grandes

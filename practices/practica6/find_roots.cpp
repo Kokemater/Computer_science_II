@@ -13,6 +13,8 @@ double biseccion(double (*f)(double), double a, double b, double eps, double &n_
 	{
         x_med = (a + b) / 2.0;
         n_iterations++;
+		if (f(x_med) == 0)
+			return x_med;
         if (f(a) * f(x_med) < 0)
             b = x_med; 
         else
