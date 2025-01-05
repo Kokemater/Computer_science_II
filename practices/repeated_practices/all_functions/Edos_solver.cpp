@@ -1,28 +1,23 @@
 #include "computation_II.h"
 
-double z1_prime(matrix <double> cond_inic, double x);
-double z2_prime(matrix <double> cond_inic, double x);
 
-double p(double x);
-double q(double x);
-double r(double x);
-
-matrix<double> Z_prime_funcs(matrix <double> cond_iniciales, double x) {
+matrix<double> Z_prime_funcs(matrix <double> cond_iniciales, double x, matrix <double(*)(matrix <double>, double)> Z_derivatives) {
     int order = cond_iniciales.RowNo();
     matrix<double> Z_prime(order, 1);
 
     // Calculamos las derivadas para cada orden
-    Z_prime(0, 0) = z1_prime(cond_iniciales, x); // Primera derivada
-    Z_prime(1, 0) = z2_prime(cond_iniciales, x); // Segunda derivada
-
+	for (int i = 0; i < Z_derivatives.RowNo(); i++)
+	{
+    	Z_prime(i, 0) = Z_derivatives(i,0)(cond_iniciales, x); 
+	}
     return Z_prime;
 }
 
 // Método de Euler para un paso
-void euler_one_step(double& x, matrix<double>& cond_iniciales, double h) {
+void euler_one_step(double& x, matrix<double>& cond_iniciales, double h,matrix <double(*)(matrix <double>, double)> Z_derivatives) {
     int order = cond_iniciales.RowNo();
 
-    matrix<double> Z_prime = Z_prime_funcs(cond_iniciales, x);
+    matrix<double> Z_prime = Z_prime_funcs(cond_iniciales, x, Z_derivatives);
 
     // Actualizamos las variables dependientes con el método de Euler
     for (int i = 0; i < order; i++) {
@@ -32,14 +27,14 @@ void euler_one_step(double& x, matrix<double>& cond_iniciales, double h) {
     x += h;
 }
 // Método de Runge-Kutta 2º orden (RK2)
-void runge_kutta_2(double& x, matrix<double>& cond_iniciales, double h) {
+void runge_kutta_2(double& x, matrix<double>& cond_iniciales, double h, matrix <double(*)(matrix <double>, double)> Z_derivatives) {
     int order = cond_iniciales.RowNo();
 
     matrix<double> k1(order, 1);
     matrix<double> k2(order, 1);
 
     // Calculamos k1 en el punto actual
-    k1 = Z_prime_funcs(cond_iniciales, x);
+    k1 = Z_prime_funcs(cond_iniciales, x, Z_derivatives);
 
     // Calculamos las condiciones intermedias usando k1
     matrix<double> cond_intermedias = cond_iniciales;
@@ -48,7 +43,7 @@ void runge_kutta_2(double& x, matrix<double>& cond_iniciales, double h) {
     }
 
     // Calculamos k2 en el punto intermedio
-    k2 = Z_prime_funcs(cond_intermedias, x + h);
+    k2 = Z_prime_funcs(cond_intermedias, x + h, Z_derivatives);
 
     // Actualizamos las condiciones iniciales usando el promedio de k1 y k2
     for (int i = 0; i < order; i++) {
@@ -60,7 +55,7 @@ void runge_kutta_2(double& x, matrix<double>& cond_iniciales, double h) {
 }
 
 // Método de Runge-Kutta 4º orden (RK4)
-void runge_kutta_4(double& x, matrix<double>& cond_iniciales, double h) {
+void runge_kutta_4(double& x, matrix<double>& cond_iniciales, double h, matrix <double(*)(matrix <double>, double)> Z_derivatives) {
     int order = cond_iniciales.RowNo();
 
     matrix<double> k1(order, 1);
@@ -69,28 +64,28 @@ void runge_kutta_4(double& x, matrix<double>& cond_iniciales, double h) {
     matrix<double> k4(order, 1);
 
     // Calculamos k1 en el punto actual
-    k1 = Z_prime_funcs(cond_iniciales, x);
+    k1 = Z_prime_funcs(cond_iniciales, x, Z_derivatives);
 
     // Calculamos las condiciones intermedias usando k1 para k2
     matrix<double> cond_intermedias = cond_iniciales;
     for (int i = 0; i < order; i++) {
         cond_intermedias(i, 0) += 0.5 * h * k1(i, 0);
     }
-    k2 = Z_prime_funcs(cond_intermedias, x + 0.5 * h);
+    k2 = Z_prime_funcs(cond_intermedias, x + 0.5 * h, Z_derivatives);
 
     // Calculamos las condiciones intermedias usando k2 para k3
     cond_intermedias = cond_iniciales;
     for (int i = 0; i < order; i++) {
         cond_intermedias(i, 0) += 0.5 * h * k2(i, 0);
     }
-    k3 = Z_prime_funcs(cond_intermedias, x + 0.5 * h);
+    k3 = Z_prime_funcs(cond_intermedias, x + 0.5 * h, Z_derivatives);
 
     // Calculamos las condiciones intermedias usando k3 para k4
     cond_intermedias = cond_iniciales;
     for (int i = 0; i < order; i++) {
         cond_intermedias(i, 0) += h * k3(i, 0);
     }
-    k4 = Z_prime_funcs(cond_intermedias, x + h);
+    k4 = Z_prime_funcs(cond_intermedias, x + h, Z_derivatives);
 
     // Actualizamos las condiciones iniciales usando una combinación ponderada de k1, k2, k3 y k4
     for (int i = 0; i < order; i++) {
@@ -106,7 +101,7 @@ double error(double analitico, double numerico)
 	return (abs(analitico - numerico));
 }
 
-double secant_method(double a, double b, double ua, double ub, double epsilon, double h)
+double secant_method(double a, double b, double ua, double ub, double epsilon, double h, matrix <double(*)(matrix <double>, double)> Z_derivatives)
  {
     double v0_1 = -10.0, v0_2 = 10.0; // Valores iniciales para v(0)
     double u1_1, u1_2;
@@ -117,7 +112,7 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
     cond_iniciales(0, 0) = ua; // z1(0) = u(0)
     cond_iniciales(1, 0) = v0_1; // z2(0) = u'(0)
 
-    while (x < b) runge_kutta_4(x, cond_iniciales, h);
+    while (x < b) runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
     u1_1 = cond_iniciales(0, 0) - ub; // Error en u(1)
 
     // Segunda integración con v0_2
@@ -125,7 +120,7 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
     cond_iniciales(0, 0) = ua;
     cond_iniciales(1, 0) = v0_2;
 
-    while (x < b) runge_kutta_4(x, cond_iniciales, h);
+    while (x < b) runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
     u1_2 = cond_iniciales(0, 0) - ub;
 
     // Método de la secante iterativo
@@ -142,7 +137,7 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
         cond_iniciales(0, 0) = ua;
         cond_iniciales(1, 0) = v0_2;
 
-        while (x < 1.0) runge_kutta_4(x, cond_iniciales, h);
+        while (x < 1.0) runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
 
         u1_2 = cond_iniciales(0, 0) - ub;
     }
@@ -150,7 +145,7 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
 }
 
 
-void diferencias_finitas(double h, double a, double b, double ua, double ub)
+void diferencias_finitas(double h, double a, double b, double ua, double ub, double (*p)(double), double (*q) (double), double (*r)(double))
 {
 	/* El procedimiento es el siguiente:
 	* Si hemos definifo n subintervalos, u debe tener n+1 elementos ( va
@@ -209,10 +204,10 @@ void diferencias_finitas(double h, double a, double b, double ua, double ub)
 }
 
 
-void rk4_con_metodo_del_disparo(double h, double a, double b, double ua, double ub)
+void rk4_con_metodo_del_disparo(double h, double a, double b, double ua, double ub, matrix <double(*)(matrix <double>, double)> Z_derivatives)
 {
 	double eps = 1e-17;
-	double v_0 = secant_method(a, b, ua, ub, eps, h);
+	double v_0 = secant_method(a, b, ua, ub, eps, h, Z_derivatives);
 
 	matrix <double> cond_iniciales(2,1);
 	cond_iniciales(0,0) = ua;
@@ -229,7 +224,7 @@ void rk4_con_metodo_del_disparo(double h, double a, double b, double ua, double 
 	double x = a;
 	while(x < b)
 	{
-		runge_kutta_4(x, cond_iniciales, h);
+		runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
 		cout << cond_iniciales(0,0) << endl;
 		F_datos << x << " " << cond_iniciales(0,0) << " " << cond_iniciales (1,0) << endl;
 	}

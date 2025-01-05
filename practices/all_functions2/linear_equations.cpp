@@ -69,22 +69,7 @@ int Jacobi(matrix <double> A, matrix <double> b, matrix <double> &x, double eps)
 	return iterations;
 }
 
-void insert_rands_in_matrix(matrix <double> &A, double min, double max, bool dominancia_diagonal)
-{
-	srand(42);
-	double rand_v;
-    double random_number;
-	for(int i = 0; i < A.RowNo(); i++)
-	{
-		for (int j = 0; j < A.ColNo(); j++)
-		{
-			rand_v = rand();
-			A(i,j) = min + (rand_v / RAND_MAX) * (max - min);
-			if (i != j && dominancia_diagonal == true)
-				A(i,j) = A(i,j)/1000;
-		}
-	}
-}
+
 void LU(matrix <double> A, matrix <double> &L, matrix <double> &U)
 {
 	L.Null();
@@ -158,6 +143,21 @@ void solve_LU(matrix<double> L, matrix<double> U, matrix<double> b, matrix<doubl
     }
 }
 
+
+/**
+ * @brief Realiza la descomposición LU de un sistema tridiagonal y resuelve el sistema.
+ * 
+ * @param d Matriz (1 × n) que contiene la diagonal principal del sistema.
+ * @param ds Matriz (1 × (n-1)) que contiene los elementos de la superdiagonal (diagonal superior desplazada).
+ * @param df Matriz (1 × (n-1)) que contiene los elementos de la subdiagonal (diagonal superior desplazada).
+ * @param b Matriz (1 × n) que contiene los términos independientes del sistema.
+ * @param size Entero que representa el tamaño del sistema (n).
+ * @param delta_f Referencia a una matriz (1 × (n-1)) para almacenar los factores de eliminación de la subdiagonal.
+ * @param delta Referencia a una matriz (1 × n) para almacenar la diagonal principal modificada (diagonal de la matriz U).
+ * @param delta_s Referencia a una matriz (1 × (n-1)) para almacenar los elementos de la superdiagonal (diagonal inferior de U).
+ * @param z Referencia a una matriz (1 × n) para almacenar los resultados intermedios de la sustitución progresiva.
+ * @param x Referencia a una matriz (1 × n) para almacenar el vector solución.
+ */
 
 void LU_tri(matrix <double> d, matrix <double> ds, matrix <double> df, matrix <double> b, int size, matrix <double> &delta_f, matrix <double> &delta, matrix <double> &delta_s, matrix <double> &z, matrix <double> &x)
 {

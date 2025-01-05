@@ -20,7 +20,7 @@
  * o si la estimación inicial está demasiado lejos de la solución real.
  */
 
-void newton(matrix < double(*)(double, double)> funciones, matrix < double(*)(double, double)> jacobiano, matrix <double> x1, double eps, double &n_iterations_newton, matrix <double> &solution)
+void newton_non_linear(matrix < double(*)(double, double)> funciones, matrix < double(*)(double, double)> jacobiano, matrix <double> x1, double eps, double &n_iterations_newton, matrix <double> &solution)
 {
 	matrix <double> x_prev(2,1);
 	matrix <double> x_next(2,1);

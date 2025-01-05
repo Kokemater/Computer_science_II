@@ -2,9 +2,9 @@
 
 
 
-long double biseccion(long double (*f)(long double), long double a, long double b, long double eps, long double &n_iterations) {
+double biseccion(double (*f)(double), double a, double b, double eps, double &n_iterations) {
     n_iterations = 0;
-    long double x_med;
+    double x_med;
 	if (f(a) * f(b) > 0)
 	{
 		cout << "f(a) y f(b) tienen el mismo signo." << endl;
@@ -21,11 +21,11 @@ long double biseccion(long double (*f)(long double), long double a, long double 
     }
     return (a + b) / 2.0; 
 }
-long double secante(long double (*f) (long double), long double x1, long double x2, long double eps, long double &n_iterations_sec)
+double secante(double (*f) (double), double x1, double x2, double eps, double &n_iterations_sec)
 {
-	long double x_prev = x1;
-	long double x_curr = x2;
-	long double x_next;
+	double x_prev = x1;
+	double x_curr = x2;
+	double x_next;
 
 	n_iterations_sec = 0;
 	while(true)
@@ -41,10 +41,10 @@ long double secante(long double (*f) (long double), long double x1, long double 
 	}
 }
 
-long double newton(long double (*f)(long double), long double (*f_prime)(long double), long double x1, long double eps, long double &n_iterations_newton)
+double newton(double (*f)(double), double (*f_prime)(double), double x1, double eps, double &n_iterations_newton)
 {
-	long double x_prev = x1;
-	long double x_next;
+	double x_prev = x1;
+	double x_next;
 
 	n_iterations_newton = 0;
 	while(true)

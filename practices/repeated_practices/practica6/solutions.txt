@@ -1,0 +1,52 @@
+Para precisión : 0.000001
+Results for 0th point: 
+biseccion : -0.478233 iter 18.000000
+newton : -0.478233 iter 6.000000
+secante : -0.478233 iter 7.000000
+Results for 1th point: 
+biseccion : -0.407925 iter 17.000000
+newton : -0.407925 iter 4.000000
+secante : -0.407925 iter 7.000000
+Results for 2th point: 
+biseccion : -0.000000 iter 19.000000
+newton : -0.000000 iter 4.000000
+secante : 0.000000 iter 6.000000
+Results for 3th point: 
+biseccion : 0.381904 iter 17.000000
+newton : 0.381904 iter 4.000000
+secante : 0.381904 iter 7.000000
+Results for 4th point: 
+biseccion : 0.517824 iter 17.000000
+newton : 0.517824 iter 4.000000
+secante : 0.517824 iter 6.000000
+Results for 5th point: 
+biseccion : 0.961083 iter 17.000000
+newton : 0.961083 iter 3.000000
+secante : 0.961083 iter 5.000000
+------------------------ 
+Para precisión : 0.00000000001
+Results for 0th point: 
+biseccion : -0.47823340607 iter 34.00000000000
+newton : -0.47823340607 iter 7.00000000000
+secante : -0.47823340607 iter 8.00000000000
+Results for 1th point: 
+biseccion : -0.40792481664 iter 34.00000000000
+newton : -0.40792481664 iter 5.00000000000
+secante : -0.40792481664 iter 8.00000000000
+Results for 2th point: 
+biseccion : -0.00000000000 iter 35.00000000000
+newton : -0.00000000000 iter 5.00000000000
+secante : 0.00000000000 iter 7.00000000000
+Results for 3th point: 
+biseccion : 0.38190435862 iter 34.00000000000
+newton : 0.38190435862 iter 5.00000000000
+secante : 0.38190435862 iter 8.00000000000
+Results for 4th point: 
+biseccion : 0.51782397502 iter 34.00000000000
+newton : 0.51782397502 iter 5.00000000000
+secante : 0.51782397502 iter 7.00000000000
+Results for 5th point: 
+biseccion : 0.96108284401 iter 34.00000000000
+newton : 0.96108284401 iter 4.00000000000
+secante : 0.96108284401 iter 6.00000000000
+------------------------ 

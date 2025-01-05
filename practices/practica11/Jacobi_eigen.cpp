@@ -76,6 +76,70 @@ int Jacobi_eigen(matrix <double> &A, matrix <double> &U, double &iter, double ep
     return 0;
 }
 
+int Jacobi_eigen_modified(matrix <double> &A, matrix <double> &U, double &iter, double eps) {
+    int max_iter = 10000;
+    int i_m, j_m;
+    double theta;
+    matrix <double> U_prev(A.RowNo(), A.ColNo());
+    matrix <double> R(A.RowNo(), A.ColNo());
+	matrix <double> I(A.RowNo(), A.ColNo());
+    // Inicialización
+    iter = 0;
+	I.Unit();
+    U.Unit();
+
+    // Verificación de matriz cuadrada y simétrica
+    if (!A.IsSquare()) {
+        std::cout << "Non square matrix";
+        return 1;
+    }
+    else if (!A.IsSymmetric()) {
+        std::cout << "Non symmetric matrix";
+        return 1;
+    }
+
+    while (true )
+	{
+		
+        my_find_max_abs(A, i_m, j_m);
+
+        R.Unit();
+        
+        if (A(i_m, i_m) == A(j_m, j_m))
+            theta = M_PI / 4;
+        else
+            theta = 0.5 * atan(2 * A(i_m, j_m)/ (A(i_m, i_m) - A(j_m, j_m)));
+        
+        R(i_m, i_m) = cos(theta);
+        R(j_m, j_m) = cos(theta);
+        R(i_m, j_m) = -sin(theta);
+        R(j_m, i_m) = sin(theta);
+
+		// check trace
+		if (abs((~R * A * R).Traza() - A.Traza()) > 1)
+		{
+			cout << "La traza no se conserva "<< endl;
+			return 1;
+		}
+        A = ~R * A * R;
+		
+		my_find_max_abs(A, i_m, j_m);
+		if (abs(A(i_m, j_m)) < eps)
+			break;
+        U = U * R;
+        iter++;
+		if  (iter > max_iter)
+			return 1;
+    }
+    // Si no convergió
+    if (iter >= max_iter) {
+        std::cout << "El método de Jacobi no ha convergido en " << max_iter << " iteraciones." << std::endl;
+        return 1;
+    }
+
+    return 0;
+}
+
 void set_precission(double precission)
 {
     double cifras = abs(log10(precission));

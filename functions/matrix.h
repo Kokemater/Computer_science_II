@@ -21,8 +21,8 @@
 // users of this class is familiar with matrix algebra. We have not
 // defined any specialization of this template here, so all the instances
 // of matrix will be created implicitly by the compiler. The data types
-// tested with this class are float, double, long double, complex<float>,
-// complex<double> and complex<long double>. Note that this class is not 
+// tested with this class are float, double, double, complex<float>,
+// complex<double> and complex<double>. Note that this class is not 
 // optimized for performance.
 //
 // Since implementation of exception, namespace and template are still
@@ -162,7 +162,7 @@ typedef int bool;
 #if ( defined(__BORLANDC__) || _MSC_VER ) && !defined( __GNUG__ ) 
 inline float abs (float v) { return (float)fabs( v); } 
 inline double abs (double v) { return fabs( v); } 
-inline long double abs (long double v) { return fabsl( v); }
+inline double abs (double v) { return fabsl( v); }
 #endif
 
 #if defined(__GNUG__) || defined(__MWERKS__) || (defined(__BORLANDC__) && (__BORLANDC__ >= 0x540))

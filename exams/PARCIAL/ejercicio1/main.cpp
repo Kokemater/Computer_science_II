@@ -1,25 +1,25 @@
 #include "funcs.h"
 
-long double f(long double x)
+double f(double x)
 {
 	return (3*M_PI*M_PI - 6*M_PI*x + M_PI*M_PI*x + 3*x*x - 2*M_PI*x*x + x*x*x);
 }
 
-long double f_prime(long double x)
+double f_prime(double x)
 {
 	return (-6*M_PI + M_PI*M_PI + 6*x - 4*M_PI*x + 3*x*x);
 }
 
-long double f_prime_prime(long double x)
+double f_prime_prime(double x)
 {
 	return (6 - 4*M_PI + 6*x);
 }
-long double u(long double x)
+double u(double x)
 {
 	return (f(x)/f_prime(x));
 }
 
-long double u_prime(long double x)
+double u_prime(double x)
 {
 	return ((f_prime(x)*f_prime(x) - f(x)*f_prime_prime(x))/(f_prime(x)*f_prime(x)));
 }
@@ -29,14 +29,14 @@ int main(void)
 	cout << fixed << setprecision(7);
 
 	//////////////// Ejercicio (1) /////////////////////
-	long double eps = 1e-7;
-	long double n_iterations_newton = 0;
-	long double n_iterations_secant = 0;
-	long double n_iterations_bisection = 0;
+	double eps = 1e-7;
+	double n_iterations_newton = 0;
+	double n_iterations_secant = 0;
+	double n_iterations_bisection = 0;
 
 	// Apartado (a)
-	long double a_n = 0;
-	long double newton_x = newton(f, f_prime, a_n, eps, n_iterations_newton);
+	double a_n = 0;
+	double newton_x = newton(f, f_prime, a_n, eps, n_iterations_newton);
 
 	cout << "Apartado (a): Se necesitan " << n_iterations_newton << " para encontrar una raíz" << endl;
 	cout << "La raíz es x= " << newton_x << endl; 
@@ -55,9 +55,9 @@ int main(void)
 	cout << "-----------------------" << endl << endl;
 
 	// Apartado (d)
-	long double a_b = 0;
-	long double b_b = 5;
-	long double biseccion_x = biseccion(u, a_b, b_b, eps, n_iterations_bisection);
+	double a_b = 0;
+	double b_b = 5;
+	double biseccion_x = biseccion(u, a_b, b_b, eps, n_iterations_bisection);
 	cout << "Apartado (c): Se necesitan " << n_iterations_bisection << " para encontrar una raíz" << endl;
 	cout << "La raíz es x= " << biseccion_x << endl; 
 

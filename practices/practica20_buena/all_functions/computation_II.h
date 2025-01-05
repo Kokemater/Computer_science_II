@@ -4,9 +4,9 @@
 #include "math_stuff.h"
 
 // Find roots funcs
-long double newton(long double (*f)(long double), long double (*f_prime)(long double), long double x1, long double eps, long double &n_iterations_newton);
-long double secante(long double (*f) (long double), long double x1, long double x2, long double eps, long double &n_iterations_sec);
-long double biseccion(long double (*f)(long double), long double a, long double b, long double eps, long double &n_iterations);
+double newton(double (*f)(double), double (*f_prime)(double), double x1, double eps, double &n_iterations_newton);
+double secante(double (*f) (double), double x1, double x2, double eps, double &n_iterations_sec);
+double biseccion(double (*f)(double), double a, double b, double eps, double &n_iterations);
 
 // Linear Equations
 int Gauss_Seidel(matrix<double> A, matrix<double> b, matrix<double> &x, double eps);
@@ -22,11 +22,11 @@ void newton(matrix < double(*)(double, double)> funciones, matrix < double(*)(do
 void Broyden(matrix <double (*)(double, double)> funciones, matrix <double> x1, matrix <double> x2, matrix <double> A_0, double eps, double &n_iterations_sec, matrix <double> &solution);
 
 // Diagonalization
-int Jacobi_eigen(matrix <long double> &A, matrix <long double> &U, long double &iter, long double eps);
-long double Off(matrix <long double> A);
-int Jacobi_eigen_for_Off_plot(matrix <long double> &A, matrix <long double> &U, long double &iter, long double eps, long double (*Off) (matrix <long double>), ofstream &outfile);
-matrix <long double> print_eigen_val(matrix <long double> A);
-matrix <long double> get_eigen_vect(matrix <long double> A, int pos);
+int Jacobi_eigen(matrix <double> &A, matrix <double> &U, double &iter, double eps);
+double Off(matrix <double> A);
+int Jacobi_eigen_for_Off_plot(matrix <double> &A, matrix <double> &U, double &iter, double eps, double (*Off) (matrix <double>), ofstream &outfile);
+matrix <double> print_eigen_val(matrix <double> A);
+matrix <double> get_eigen_vect(matrix <double> A, int pos);
 
 // Integration
 double trapezoidal(double (*f)(double), double a, double b, double tau);
@@ -57,10 +57,10 @@ void diferencias_finitas(double h, double a, double b, double ua, double ub);
 // Matrix 
 void insert_rands_in_matrix(matrix <double> &A, double min, double max, bool dominancia_diagonal);
 double error(matrix <double> A, matrix <double>b, matrix <double>x); 
-int my_find_max_abs(matrix <long double> A, int &row, int &col);
+int my_find_max_abs(matrix <double> A, int &row, int &col);
 
 // Precisision and error
-void set_precission(long double precission);
+void set_precission(double precission);
 double error_relativo(double dnumerica, double dteorica);
 
 #endif

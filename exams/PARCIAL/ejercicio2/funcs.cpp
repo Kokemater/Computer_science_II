@@ -1,7 +1,7 @@
 #include "funcs.h"
 
 
-int my_find_max_abs(matrix <long double> A, int &row, int &col)
+int my_find_max_abs(matrix <double> A, int &row, int &col)
 {
 	row = 0;
 	col = 1;
@@ -19,15 +19,15 @@ int my_find_max_abs(matrix <long double> A, int &row, int &col)
 	return A(row, col);
 }
 
-int Jacobi_eigen(matrix <long double> &A, matrix <long double> &U, long double &iter, long double eps) 
+int Jacobi_eigen(matrix <double> &A, matrix <double> &U, double &iter, double eps) 
 {
     int max_iter = 10000;
     int i_m, j_m;
-    long double theta;
-    matrix <long double> U_prev(A.RowNo(), A.ColNo());
-    matrix <long double> R(A.RowNo(), A.ColNo());
-	matrix <long double> I(A.RowNo(), A.ColNo());
-	long double initial_tr = A.Traza();
+    double theta;
+    matrix <double> U_prev(A.RowNo(), A.ColNo());
+    matrix <double> R(A.RowNo(), A.ColNo());
+	matrix <double> I(A.RowNo(), A.ColNo());
+	double initial_tr = A.Traza();
     // Inicialización
     iter = 0;
 	I.Unit();
@@ -81,18 +81,18 @@ int Jacobi_eigen(matrix <long double> &A, matrix <long double> &U, long double &
     return 0;
 }
 
-int Jacobi_eigen_for_Off_plot(matrix <long double> &A, matrix <long double> &U, long double &iter, long double eps, long double (*Off) (matrix <long double>), ofstream &outfile) 
+int Jacobi_eigen_for_Off_plot(matrix <double> &A, matrix <double> &U, double &iter, double eps, double (*Off) (matrix <double>), ofstream &outfile) 
 {
 	cout << "Matrix : " << endl << A <<endl;
     int max_iter = 10000;
     int i_m, j_m;
-    long double theta;
-    matrix <long double> U_prev(A.RowNo(), A.ColNo());
-    matrix <long double> R(A.RowNo(), A.ColNo());
-	matrix <long double> I(A.RowNo(), A.ColNo());
-	long double initial_tr = A.Traza();
-	long double first_off = Off(A);
-	long double teorica;
+    double theta;
+    matrix <double> U_prev(A.RowNo(), A.ColNo());
+    matrix <double> R(A.RowNo(), A.ColNo());
+	matrix <double> I(A.RowNo(), A.ColNo());
+	double initial_tr = A.Traza();
+	double first_off = Off(A);
+	double teorica;
 	int n = A.RowNo();
     // Inicialización
     iter = 0;
@@ -149,15 +149,15 @@ int Jacobi_eigen_for_Off_plot(matrix <long double> &A, matrix <long double> &U, 
     return 0;
 }
 
-void set_precission(long double precission)
+void set_precission(double precission)
 {
-    long double cifras = abs(log10(precission));
+    double cifras = abs(log10(precission));
     cout << fixed << setprecision(cifras);
 }
 
-matrix <long double> print_eigen_val(matrix <long double> A)
+matrix <double> print_eigen_val(matrix <double> A)
 {
-	matrix <long double> array(A.ColNo(), 1);
+	matrix <double> array(A.ColNo(), 1);
 	for(int i = 0; i < A.ColNo(); i++)
 	{
 		array(i,0) = A(i,i);		
@@ -167,9 +167,9 @@ matrix <long double> print_eigen_val(matrix <long double> A)
 	return array;
 }
 
-matrix <long double> get_eigen_vect(matrix <long double> A, int pos)
+matrix <double> get_eigen_vect(matrix <double> A, int pos)
 {
-	matrix <long double> array(A.ColNo(), 1);
+	matrix <double> array(A.ColNo(), 1);
 	for(int i = 0; i < A.ColNo(); i++)
 	{
 		array(i,0) = A(i,pos);		
@@ -177,9 +177,9 @@ matrix <long double> get_eigen_vect(matrix <long double> A, int pos)
 	return array;
 }
 
-long double Off(matrix <long double> A)
+double Off(matrix <double> A)
 {
-	long double total = 0;
+	double total = 0;
 	for(int i = 0; i < A.RowNo(); i++)
 	{
 		for (int j = 0; j < A.ColNo(); j++)

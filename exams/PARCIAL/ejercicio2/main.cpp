@@ -1,6 +1,6 @@
 #include "funcs.h"
 
-void create_matrix(matrix <long double> &A)
+void create_matrix(matrix <double> &A)
 {
 	for(int i = 0; i <A.RowNo(); i++)
 	{
@@ -12,7 +12,7 @@ void create_matrix(matrix <long double> &A)
 }
 int main(void)
 {
-	matrix <long double> A(10,10);
+	matrix <double> A(10,10);
 	create_matrix(A);
 	if (!A.IsSymmetric())
 	{
@@ -26,13 +26,13 @@ int main(void)
 	}
 	cout << "Matrix A :" << endl;
 	cout << A << endl;
-	matrix <long double> A_copy = A;
+	matrix <double> A_copy = A;
 
-	long double n = A.RowNo();
-	matrix <long double> B (n,n);
-	matrix <long double> U (n,n);
-	long double eps = 1e-7;
-	long double iter;
+	double n = A.RowNo();
+	matrix <double> B (n,n);
+	matrix <double> U (n,n);
+	double eps = 1e-7;
+	double iter;
 	int errors;
 
 	// Apartado (a) y (b)
@@ -61,9 +61,9 @@ int main(void)
 	cout << " Se han realizado " << iter << " interaciones para precisión = 1e-12" << endl;
 
 
-	matrix <long double> eigenvec(A.RowNo(),1);
-	matrix <long double> eigenval(A.RowNo(),1);
-	matrix <long double> diff(A.RowNo(),1);
+	matrix <double> eigenvec(A.RowNo(),1);
+	matrix <double> eigenval(A.RowNo(),1);
+	matrix <double> diff(A.RowNo(),1);
 
 	// Apartado (c)
 	// Primero trabajaremos con el resultado de 1e-12

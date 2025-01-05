@@ -12,9 +12,9 @@ using namespace std;
 using namespace math;
 
 // Find roots funcs
-long double newton(long double (*f)(long double), long double (*f_prime)(long double), long double x1, long double eps, long double &n_iterations_newton);
-long double secante(long double (*f) (long double), long double x1, long double x2, long double eps, long double &n_iterations_sec);
-long double biseccion(long double (*f)(long double), long double a, long double b, long double eps, long double &n_iterations);
+double newton(double (*f)(double), double (*f_prime)(double), double x1, double eps, double &n_iterations_newton);
+double secante(double (*f) (double), double x1, double x2, double eps, double &n_iterations_sec);
+double biseccion(double (*f)(double), double a, double b, double eps, double &n_iterations);
 
 
 #endif
