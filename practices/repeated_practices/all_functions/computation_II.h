@@ -65,6 +65,8 @@ void min_element_index(const matrix<double>& A, int &min_row, int &min_col, bool
 void max_element_index(const matrix<double>& A, int &max_row, int &max_col);
 void max_element_index(const matrix<double>& A, int &max_row, int &max_col, bool find_by_absolute_value = false);
 
+// Math 
+double intersection_with_horizontal(double a, double b, double y0);
 
 // Precisision and error
 void set_precission(double precission);

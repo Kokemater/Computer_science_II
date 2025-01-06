@@ -144,7 +144,16 @@ void max_element_index(const matrix<double>& A, int &max_row, int &max_col, bool
         }
     }
 }
+double intersection_with_horizontal(double a, double b, double y0)
+{
+	// Para una recta
+    if (a == 0) {
+        throw std::invalid_argument("La pendiente 'a' no puede ser 0, ya que la recta sería horizontal y no intersecta con y = y0.");
+    }
 
+    // Resolver la ecuación: y0 = ax + b -> x = (y0 - b) / a
+    return (y0 - b) / a;
+}
 
 
 void set_precission(double precission)

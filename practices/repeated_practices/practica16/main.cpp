@@ -31,5 +31,7 @@ int main(void) {
 		error <<  log10(error_relativo(regresivas3(f, x, h),f_prime_prime_prime(x)))<< endl;
 	}
 
+
+
     return 0;
 }
