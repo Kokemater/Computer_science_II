@@ -13,18 +13,67 @@ int main(void)
 {
 	double a = -6;
 	double b = 6;
-	double trap_sol, simp_sol, anal_sol;
+	double trap_sol, simp_sol, anal_sol, gauss_sol;
 
+	// Parte 1
 	anal_sol = I_exact();
-	ofstream Error("Error.txt");
-	Error << fixed << setprecision(15);
-	// tau		trap_error		simp_error
-	for (double tau = 1; tau > 1e-6; tau /= 2)
-	{
-		Error << log10(tau) << " " << log10(abs(anal_sol - trapezoidal(f, a, b, tau))) << " " << log10(abs(anal_sol -  simpson(f, a, b, tau))) << endl;
-	}
+	gauss_sol = gauss_6(f, a,b);
+	double gauss_err = abs(anal_sol - gauss_sol);
+	int n = 1;
 
-	cout << "trap_sol " << trap_sol << endl;
-	cout << "simp_sol" << simp_sol <<endl;
-	cout << "anal_sol " << anal_sol << endl;
+	while(1)
+	{
+		double tau = (b-a)/n;
+		if (abs(simpson(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
+	}
+	cout <<" Particiones simpson : "<<  n <<endl;
+	int fraccion = n/6;
+	cout << "FRACCION: simpson/gauss : " << fraccion << endl;
+
+	n = 1;
+	while(1)
+	{
+		double tau = (b-a)/n;
+		if (abs(trapezoidal(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
+	}
+	cout <<" Particiones trapezoidal : "<<  n <<endl;
+	fraccion = n/6;
+	cout << "FRACCION: trapezoidal/gauss : " << fraccion << endl;
+
+	cout << "--------------------" <<endl;
+	// Parte 2
+	double I1 =  gauss_6(f, a,0);
+	double I2 = gauss_6(f, 0,b);
+	gauss_sol = I1 + I2;
+	gauss_err = abs(anal_sol - gauss_sol);
+
+	while(1)
+	{
+		double tau = (b-a)/n;
+		if (abs(simpson(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
+	}
+	cout <<" Particiones simpson : "<<  n <<endl;
+	fraccion = n/12;
+	cout << "FRACCION: simpson/gauss : " << fraccion << endl;
+
+	n = 1;
+	while(1)
+	{
+		double tau = (b-a)/n;
+		if (abs(trapezoidal(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
+	}
+	cout <<" Particiones trapezoidal : "<<  n <<endl;
+	fraccion = n/12;
+	cout << "FRACCION: trapezoidal/gauss : " << fraccion << endl;
+
+
+
 }

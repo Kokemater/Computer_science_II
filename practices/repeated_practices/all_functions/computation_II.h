@@ -59,6 +59,12 @@ void insert_rands_in_matrix(matrix <double> &A, double min, double max, bool dom
 int my_find_max_abs(matrix < double> A, int &row, int &col);
 matrix <double> file_to_matrix(string filename, int rows, int cols);
 void matrix_to_file(string filename, const matrix<double>& A, double eps);
+matrix<double> extract_columns(const matrix<double>& A, int start_col, int end_col);
+matrix<double> extract_rows(const matrix<double>& A, int start_row, int end_row);
+void min_element_index(const matrix<double>& A, int &min_row, int &min_col, bool find_by_absolute_value = false);
+void max_element_index(const matrix<double>& A, int &max_row, int &max_col);
+void max_element_index(const matrix<double>& A, int &max_row, int &max_col, bool find_by_absolute_value = false);
+
 
 // Precisision and error
 void set_precission(double precission);

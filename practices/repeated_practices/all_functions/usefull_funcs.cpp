@@ -59,6 +59,94 @@ void insert_rands_in_matrix(matrix <double> &A, double min, double max, bool dom
 	}
 }
 
+
+matrix<double> extract_columns(const matrix<double>& A, int start_col, int end_col) {
+    // Verificar que el rango de columnas es válido
+    if (start_col >= A.ColNo() || end_col >= A.ColNo() || start_col > end_col) {
+        throw std::out_of_range("El rango de columnas está fuera del rango.");
+    }
+
+    // Crear una nueva matriz con el mismo número de filas y las columnas seleccionadas
+    matrix<double> col_matrix(A.RowNo(), end_col - start_col + 1);
+
+    // Copiar las columnas seleccionadas a la nueva matriz
+    for (int i = 0; i < A.RowNo(); i++) {
+        for (int j = start_col; j <= end_col; j++) {
+            col_matrix(i, j - start_col) = A(i, j);
+        }
+    }
+
+    return col_matrix;
+}
+
+
+matrix<double> extract_rows(const matrix<double>& A, int start_row, int end_row) {
+    // Verificar que el rango de filas es válido
+    if (start_row >= A.RowNo() || end_row >= A.RowNo() || start_row > end_row) {
+        throw std::out_of_range("El rango de filas está fuera del rango.");
+    }
+
+    // Crear una nueva matriz con las filas seleccionadas y el mismo número de columnas
+    matrix<double> row_matrix(end_row - start_row + 1, A.ColNo());
+
+    // Copiar las filas seleccionadas a la nueva matriz
+    for (int i = start_row; i <= end_row; i++) {
+        for (int j = 0; j < A.ColNo(); j++) {
+            row_matrix(i - start_row, j) = A(i, j);
+        }
+    }
+
+    return row_matrix;
+}
+
+void min_element_index(const matrix<double>& A, int &min_row, int &min_col, bool find_by_absolute_value = false)
+{
+    if (A.RowNo() == 0 || A.ColNo() == 0) {
+        throw std::invalid_argument("La matriz está vacía.");
+    }
+
+    min_row = 0;
+    min_col = 0;
+    double min_value = find_by_absolute_value ? std::abs(A(0, 0)) : A(0, 0);
+
+    for (int i = 0; i < A.RowNo(); i++) {
+        for (int j = 0; j < A.ColNo(); j++) {
+            double current_value = find_by_absolute_value ? std::abs(A(i, j)) : A(i, j);
+            if (current_value < min_value) {
+                min_value = current_value;
+                min_row = i;
+                min_col = j;
+            }
+        }
+    }
+}
+
+
+
+void max_element_index(const matrix<double>& A, int &max_row, int &max_col, bool find_by_absolute_value = false)
+{
+    if (A.RowNo() == 0 || A.ColNo() == 0) {
+        throw std::invalid_argument("La matriz está vacía.");
+    }
+
+    max_row = 0;
+    max_col = 0;
+    double max_value = find_by_absolute_value ? std::abs(A(0, 0)) : A(0, 0);
+
+    for (int i = 0; i < A.RowNo(); i++) {
+        for (int j = 0; j < A.ColNo(); j++) {
+            double current_value = find_by_absolute_value ? std::abs(A(i, j)) : A(i, j);
+            if (current_value > max_value) {
+                max_value = current_value;
+                max_row = i;
+                max_col = j;
+            }
+        }
+    }
+}
+
+
+
 void set_precission(double precission)
 {
     double cifras = abs(log10(precission));
