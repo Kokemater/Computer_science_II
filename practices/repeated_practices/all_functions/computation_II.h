@@ -50,7 +50,7 @@ void euler_one_step(double& x, matrix<double>& cond_iniciales, double h,matrix <
 void runge_kutta_2(double& x, matrix<double>& cond_iniciales, double h, matrix <double(*)(matrix <double>, double)> Z_derivatives);
 void diferencias_finitas(double h, double a, double b, double ua, double ub, double (*p)(double), double (*q) (double), double (*r)(double));
 double secant_method(double a, double b, double ua, double ub, double epsilon, double h, matrix <double(*)(matrix <double>, double)> Z_derivatives);
-void rk4_con_metodo_del_disparo(double h, double a, double b, double ua, double ub, matrix <double(*)(matrix <double>, double)> Z_derivatives);
+void rk4_con_metodo_del_disparo(double a, double b, double ua, double ub, matrix <double(*)(matrix <double>, double)> Z_derivatives, double h, double eps);
 void diferencias_finitas(double h, double a, double b, double ua, double ub);
 
 ////////////////// General use ///////////////////////

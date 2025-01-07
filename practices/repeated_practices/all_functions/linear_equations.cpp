@@ -180,30 +180,7 @@ void LU_tri(matrix <double> d, matrix <double> ds, matrix <double> df, matrix <d
 	}
 }
 
-math::matrix<double> solveTrid (
- math::matrix<double> mid, math::matrix<double> lower,
-math::matrix<double> upper ,
- math::matrix<double> b ) {
- int n = mid.RowNo();
- math::matrix<double> delta(n,1);
- math::matrix<double> delta_f(n,1);
- math::matrix<double> z(n,1);
- delta(0,0) = mid(0,0);
- delta_f(0,0) = 0;
- z(0,0) = b(0,0);
- for( int i = 1; i < n; i++ ){
- delta_f(i,0) = lower(i,0)/delta(i-1,0);
- delta(i,0) = mid(i,0) - delta_f(i,0)*upper(i-1,0);
- z(i,0) = b(i,0) - delta_f(i,0)*z(i-1,0);
- }
- math::matrix<double> x(n,1);
- x(n-1,0) = z(n-1,0)/delta(n-1,0);
- for ( int i = n - 2 ; i >= 0; i-- ){
- x(i,0) = ( z(i,0) - upper(i,0) * x(i+1,0) ) / delta(i,0);
- }
 
- return x;
- } 
 
 
 double error(matrix <double> A, matrix <double>b, matrix <double>x)

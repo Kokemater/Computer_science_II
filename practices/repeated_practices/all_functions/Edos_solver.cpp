@@ -145,6 +145,31 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
 }
 
 
+math::matrix<double> solveTrid (
+ math::matrix<double> mid, math::matrix<double> lower,
+math::matrix<double> upper ,
+ math::matrix<double> b ) {
+ int n = mid.RowNo();
+ math::matrix<double> delta(n,1);
+ math::matrix<double> delta_f(n,1);
+ math::matrix<double> z(n,1);
+ delta(0,0) = mid(0,0);
+ delta_f(0,0) = 0;
+ z(0,0) = b(0,0);
+ for( int i = 1; i < n; i++ ){
+ delta_f(i,0) = lower(i,0)/delta(i-1,0);
+ delta(i,0) = mid(i,0) - delta_f(i,0)*upper(i-1,0);
+ z(i,0) = b(i,0) - delta_f(i,0)*z(i-1,0);
+ }
+ math::matrix<double> x(n,1);
+ x(n-1,0) = z(n-1,0)/delta(n-1,0);
+ for ( int i = n - 2 ; i >= 0; i-- ){
+ x(i,0) = ( z(i,0) - upper(i,0) * x(i+1,0) ) / delta(i,0);
+ }
+
+ return x;
+ } 
+ 
 void diferencias_finitas(double h, double a, double b, double ua, double ub, double (*p)(double), double (*q) (double), double (*r)(double))
 {
 	/* El procedimiento es el siguiente:
@@ -155,6 +180,7 @@ void diferencias_finitas(double h, double a, double b, double ua, double ub, dou
 	* resolverse para los valores de x desde x_1 hata x_n-1, es decir,
 	* las matrices columna ccn las diagonales tendr·n n-1 elementos.
 	*/
+	// u'' = p(x)u' + q(x)u + r(x)
 	// Determinamos las diagonales y la matriz b (B_aux).
 	int n = (int) ( b - a )/h;
 	math::matrix<double> inf(n-1,1);
@@ -204,9 +230,8 @@ void diferencias_finitas(double h, double a, double b, double ua, double ub, dou
 }
 
 
-void rk4_con_metodo_del_disparo(double h, double a, double b, double ua, double ub, matrix <double(*)(matrix <double>, double)> Z_derivatives)
+void rk4_con_metodo_del_disparo(double a, double b, double ua, double ub, matrix <double(*)(matrix <double>, double)> Z_derivatives, double h, double eps)
 {
-	double eps = 1e-17;
 	double v_0 = secant_method(a, b, ua, ub, eps, h, Z_derivatives);
 
 	matrix <double> cond_iniciales(2,1);

@@ -1,0 +1,2 @@
+plot 'x_data.txt' using 1 with lines, 'y_data.txt' using 1 with lines
+Cuando tengo los datos en 2 archivos
