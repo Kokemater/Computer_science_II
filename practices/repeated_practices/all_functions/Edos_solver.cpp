@@ -112,6 +112,7 @@ double secant_method(double a, double b, double ua, double ub, double epsilon, d
     cond_iniciales(0, 0) = ua; // z1(0) = u(0)
     cond_iniciales(1, 0) = v0_1; // z2(0) = u'(0)
 
+
     while (x < b) runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
     u1_1 = cond_iniciales(0, 0) - ub; // Error en u(1)
 
@@ -237,6 +238,7 @@ void rk4_con_metodo_del_disparo(double a, double b, double ua, double ub, matrix
 	matrix <double> cond_iniciales(2,1);
 	cond_iniciales(0,0) = ua;
 	cond_iniciales(1,0) = v_0;
+	cout << " v0 " << v_0 << endl;
 
 	string fnombre;
 	std::ostringstream ss;
@@ -250,7 +252,6 @@ void rk4_con_metodo_del_disparo(double a, double b, double ua, double ub, matrix
 	while(x < b)
 	{
 		runge_kutta_4(x, cond_iniciales, h, Z_derivatives);
-		cout << cond_iniciales(0,0) << endl;
 		F_datos << x << " " << cond_iniciales(0,0) << " " << cond_iniciales (1,0) << endl;
 	}
 }
