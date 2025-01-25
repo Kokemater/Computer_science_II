@@ -1,97 +1,79 @@
-#include "funcs.h"
+#include "../all_functions/computation_II.h"
 
 double f(double x)
 {
-	return ((x*x - x + 1) * sin(x)*sin(x));
+	return ((x*x -x +1))*(sin(x)*sin(x));
 }
-
-
+double I_exact()
+{
+	return (78 - 3*cos(12) - 73.0/4.0*sin(12));
+}
 
 int main(void)
 {
-	double a = -6.0;
-	double b = 6.0;
-	double exact_solution = 78 - 3*cos(12) - 73*sin(12)/4;
-	// Apartado a)
-	double ans = gauss_6(f, a, b);
-	cout << "ans = " << ans << "  exact_sol" << exact_solution<< endl;
+	double a = -6;
+	double b = 6;
+	double trap_sol, simp_sol, anal_sol, gauss_sol;
 
-	// Apartado b)
-	double err = abs(exact_solution - ans);
-	cout << "gauss error: " << err << endl;
+	// Parte 1
+	anal_sol = I_exact();
+	gauss_sol = gauss_6(f, a,b);
+	double gauss_err = abs(anal_sol - gauss_sol);
+	int n = 1;
 
-	// Apartado c)
-	double n_partitions = 1;
-	double tau;
-	double simp_err;
-
-	tau = (b - a)/n_partitions;
-	simp_err = abs(exact_solution - simpson(f, a, b, tau));
-	while(simp_err > err)
+	while(1)
 	{
-	n_partitions++;
-	tau = (b - a)/n_partitions;
-	simp_err = abs(exact_solution - simpson(f, a, b, tau));
+		double tau = (b-a)/n;
+		if (abs(simpson(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
 	}
-	cout << "It was necessary in simpson: " << n_partitions << "partitions" <<endl;
+	cout <<" Particiones simpson : "<<  n <<endl;
+	int fraccion = n/6;
+	cout << "FRACCION: simpson/gauss : " << fraccion << endl;
 
-	cout << "---------------------" << endl;
-	cout << "ONE INTEGRAL [-6, 6]" <<endl;
-	cout << "fraction simpson/Gauss : " << (int) n_partitions/6<< endl;
-	cout << "---------------------" << endl;
-
-	n_partitions = 1;
-	double trap_err;
-	tau = (b - a)/n_partitions;
-	trap_err = abs(exact_solution - trapezoidal(f, a, b, tau));
-	while(trap_err > err)
+	n = 1;
+	while(1)
 	{
-	n_partitions++;
-	tau = (b - a)/n_partitions;
-	trap_err = abs(exact_solution - trapezoidal(f, a, b, tau));
+		double tau = (b-a)/n;
+		if (abs(trapezoidal(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
 	}
-	cout << "It was necessary in trapezoidal: " << n_partitions << "partitions" <<endl;
+	cout <<" Particiones trapezoidal : "<<  n <<endl;
+	fraccion = n/6;
+	cout << "FRACCION: trapezoidal/gauss : " << fraccion << endl;
 
-	cout << "---------------------" << endl;
-	cout << "ONE INTEGRAL [-6, 6]" <<endl;
-	cout << "fraction trapecio/gauss : " << (int) n_partitions/6<< endl;
-	cout << "---------------------" << endl;
+	cout << "--------------------" <<endl;
+	// Parte 2
+	double I1 =  gauss_6(f, a,0);
+	double I2 = gauss_6(f, 0,b);
+	gauss_sol = I1 + I2;
+	gauss_err = abs(anal_sol - gauss_sol);
 
-
-
-	// Apartado d)
-	double I = gauss_6(f, a, 0.) + gauss_6(f, 0., b);
-	err = abs(I - exact_solution);
-	cout << "gauss error with 2 parts:" << err << endl;
-	n_partitions = 1;
-
-	tau = (b - a)/n_partitions;
-	simp_err = abs(exact_solution - simpson(f, a, b, tau));
-	while(simp_err > err)
+	while(1)
 	{
-	n_partitions++;
-	tau = (b - a)/n_partitions;
-	simp_err = abs(exact_solution - simpson(f, a, b, tau));
+		double tau = (b-a)/n;
+		if (abs(simpson(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
 	}
-	cout << "It was necessary in simpson: " <<  n_partitions << "partitions" <<endl;
+	cout <<" Particiones simpson : "<<  n <<endl;
+	fraccion = n/12;
+	cout << "FRACCION: simpson/gauss : " << fraccion << endl;
 
-	cout << "---------------------" << endl;
-	cout << "TWO INTEGRALS [-6, 0] + [0, 6]" <<endl;
-	cout << "fraction simpson/gauss : " << (int) n_partitions/12 << endl;
-	cout << "---------------------" << endl;
-	n_partitions = 1;
-	tau = (b - a)/n_partitions;
-	trap_err = abs(exact_solution - trapezoidal(f, a, b, tau));
-	while(trap_err > err)
+	n = 1;
+	while(1)
 	{
-	n_partitions++;
-	tau = (b - a)/n_partitions;
-	trap_err = abs(exact_solution - trapezoidal(f, a, b, tau));
+		double tau = (b-a)/n;
+		if (abs(trapezoidal(f,a,b,tau) - anal_sol) < gauss_err)
+			break;
+		n++;
 	}
-	cout << "It was necessary in trapezoidal: " << n_partitions << "partitions" <<endl;
-	cout << "---------------------" << endl;
-	cout << "TWO INTEGRALS [-6, 0] + [0, 6]" <<endl;
-	cout << "fraction simpson/gauss : " << (int) n_partitions/12<< endl;
-	cout << "---------------------" << endl;
+	cout <<" Particiones trapezoidal : "<<  n <<endl;
+	fraccion = n/12;
+	cout << "FRACCION: trapezoidal/gauss : " << fraccion << endl;
+
+
 
 }

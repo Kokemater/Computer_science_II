@@ -1,5 +1,4 @@
-#!/bin/bash
-g++ *.cpp -o derivatives
-./derivatives
-gnuplot new.gp
-gnuplot new2.gp
+ g++ main.cpp ../all_functions/derivation.cpp 
+ ./a.out 
+ gnuplot fit.gp 
+ code graph4.png

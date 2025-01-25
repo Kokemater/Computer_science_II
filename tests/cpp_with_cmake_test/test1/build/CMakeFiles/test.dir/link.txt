@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/test.dir/hi.cpp.o CMakeFiles/test.dir/my_func.cpp.o -o test 

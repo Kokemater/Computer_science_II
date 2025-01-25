@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/mi_proyecto.dir/main.cpp.o CMakeFiles/mi_proyecto.dir/func_1.cpp.o CMakeFiles/mi_proyecto.dir/func_2.cpp.o -o mi_proyecto 

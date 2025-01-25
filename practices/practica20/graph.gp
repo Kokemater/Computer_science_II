@@ -1,74 +1,58 @@
+
+
 # Configurar el tipo de gráfico
-set title " Método "
+set title " Comparación disparo con diferecias finitas"
 set xlabel "x"
 set ylabel "u"
 set grid
 
 
 set terminal png size 800,600
-set output 'graph.png'
+set output 'graph1.png'
 set key left
 
-
 # Graficar los puntos experimentales y la expresión teórica
-plot "h01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.1'", \
-	"h001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.01'" , \
-	"h0001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.001'", \
+plot "diferencias_h_0.1.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "diff 0.1", \
+	"diferencias_h_0.01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "diff 0.01", \
+	"diferencias_h_0.001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "diff 0.001", \
+	"disparo_h_0.1.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "disp 0.1", \
+	"disparo_h_0.01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "disp 0.01", \
+	"disparo_h_0.001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "disp 0.001", \
+
+########################################################################################
 
 # Configurar el tipo de gráfico
-set title " Diferencia relativa con respecto a h = 0.001 "
+set title "Resta diferencias finitias con respeto a h=0.001"
 set xlabel "x"
-set ylabel "u"
-set grid
-
-
-set terminal png size 800,600
-set output 'graph2.png'
-set key left
-
-
-# Graficar los puntos experimentales y la expresión teórica
-plot "diff01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.1'", \
-	"diff001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.01'" , \
-
-
-# Configurar el tipo de gráfico
-set title " Diferencia relativa con respecto al método del disparo. "
-set xlabel "x"
-set ylabel "u"
+set ylabel "Resta"
 set grid
 
 
 set terminal png size 800,600
 set output 'graph3.png'
-set key left
+set key right
 
-
+set logscale y
 # Graficar los puntos experimentales y la expresión teórica
-plot "error01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.1'", \
-	"error001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.01'" , \
-	"error0001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.001'" , \
+plot "comp01_2.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "comp 0.1", \
+	"comp001_2.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "comp 0.01", \
 
-
-
-
+########################################################################################
 
 # Configurar el tipo de gráfico
-set title " Métodos Disparo y diferencias "
+set title " Resta disparo con diferecias finitas"
 set xlabel "x"
-set ylabel "u"
+set ylabel "Resta"
 set grid
 
 
 set terminal png size 800,600
-set output 'graph4.png'
-set key left
-
+set output 'graph2.png'
+set key right
+set logscale y
 
 # Graficar los puntos experimentales y la expresión teórica
-plot "h01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.1'", \
-	"h001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.01'" , \
-	"h0001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.001'", \
-	"disparo01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.1 disparo'", \
-	"disparo001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.01 disparo'" , \
-	"disparo0001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "h = 0.001 disparo'", \
+plot "comp01.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "comp 0.1", \
+	"comp001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "comp 0.01", \
+	"comp0001.txt" using 1:2 with linespoints pointtype 7 pointsize 0.5 title "comp 0.001", \
+

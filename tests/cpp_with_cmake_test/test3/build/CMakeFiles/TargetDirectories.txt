@@ -1,3 +1,0 @@
-/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test3/build/CMakeFiles/mi_proyecto.dir
-/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test3/build/CMakeFiles/edit_cache.dir
-/home/jbutragu/compu_II/tests/cpp_with_cmake_test/test3/build/CMakeFiles/rebuild_cache.dir
